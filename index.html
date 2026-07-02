@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgeRewind — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         line-height: 1.6; max-width: 760px; margin: 0 auto; padding: 24px 20px 64px; color: #1a1a1a; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #111; } a { color: #6db3ff; } code { background:#222; } }
+  h1 { font-size: 1.7rem; margin-bottom: 4px; }
+  h2 { font-size: 1.2rem; margin-top: 2em; border-bottom: 1px solid #8883; padding-bottom: 4px; }
+  .meta { color: #6b6b6b; font-size: .92rem; margin-bottom: 1.5em; }
+  .note { background: #f6f6f6; border-left: 3px solid #ff9240; padding: 10px 14px; border-radius: 6px; font-size: .9rem; }
+  @media (prefers-color-scheme: dark) { .note { background:#1c1c1c; } .meta { color:#9a9a9a; } }
+  code { background: #f0f0f0; padding: 1px 5px; border-radius: 4px; font-size: .88em; }
+  ul { padding-left: 1.3em; }
+  li { margin: 6px 0; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<div class="meta">
+  <strong>App:</strong> AgeRewind &nbsp;·&nbsp;
+  <strong>Effective date:</strong> 2026-07-02<br>
+  <strong>Provider:</strong> KAI LI &nbsp;·&nbsp;
+  <strong>Contact:</strong> <a href="mailto:bodypilotlab@proton.me">bodypilotlab@proton.me</a> &nbsp;·&nbsp;
+  <strong>Governing law:</strong> China
+</div>
+
+<p class="note">This is a plain-language privacy policy reflecting the actual build: on-device deterministic HealthSpan scoring, and a third-party AI provider (DeepSeek) used only for written plans/explanations. AgeRewind is a non-medical wellness app.</p>
+
+<h2>Summary</h2>
+<p>We collect the minimum needed to run a personalized, adaptive fitness experience: your account, your questionnaire answers, your workouts/check-ins, your self-entered strength-test results and goals, and <strong>aggregated</strong> health metrics derived on your device. Your <strong>HealthSpan Score and HealthSpan Age are computed on your device</strong> by a deterministic engine; we store only the resulting summary values, not your raw Apple Health records. We use a third-party AI provider for written explanations and to turn your goal into a plan. We never sell your data.</p>
+
+<h2>What we collect</h2>
+<ul>
+  <li><strong>Account</strong> — when you sign in with Apple: an Apple user identifier, and your email/name <strong>only if you choose to share them</strong>. We do not receive your Apple password.</li>
+  <li><strong>Questionnaire / profile</strong> — answers you provide (e.g., age, sex, goals, experience, availability, self-reported constraints, and optional body measurements such as height/weight/waist).</li>
+  <li><strong>Derived health metrics</strong> — features your device computes from Apple Health, such as 30-day average resting heart rate, VO₂max, weekly active minutes, and body composition. <strong>Raw HealthKit records (individual workouts, heart-rate samples, etc.) stay on your device and are not uploaded.</strong></li>
+  <li><strong>Strength-test results</strong> — counts/times you enter for the optional baseline test (push-ups, chair stand, single-leg balance).</li>
+  <li><strong>Goals</strong> — the focus areas, target, and timeframe you choose.</li>
+  <li><strong>Scores over time</strong> — your computed HealthSpan Score and HealthSpan Age history (derived summary values), used to show trends.</li>
+  <li><strong>Training data</strong> — generated plans and your check-ins/logs.</li>
+  <li><strong>Subscription status</strong> — whether you have an active subscription (via Apple/RevenueCat). We do not receive your payment card details; purchases are processed by Apple.</li>
+  <li><strong>Basic technical data</strong> — we use Apple's standard crash diagnostics to fix bugs. We do <strong>not</strong> embed third-party advertising or tracking SDKs.</li>
+</ul>
+
+<h2>How we use it</h2>
+<ul>
+  <li>Compute your HealthSpan Score and HealthSpan Age <strong>on your device</strong> (deterministic, not AI).</li>
+  <li>Generate and adapt your training plans, and (for subscribers) written explanations of your results.</li>
+  <li>Show your progress and trends.</li>
+  <li>Manage your account and subscription.</li>
+  <li>Maintain security and prevent abuse (e.g., per-account free-usage limits).</li>
+</ul>
+<p>We do <strong>not</strong> use your data for advertising and do <strong>not</strong> sell it.</p>
+
+<h2>AI processing</h2>
+<p>Your scores and HealthSpan Age are computed <strong>on your device</strong> and are <strong>not</strong> produced by AI. We use a third-party AI provider only to (a) turn your chosen goal and focus areas into a training plan, and (b) for subscribers, write a plain-language explanation of your already-computed results. For these, our backend sends the relevant inputs — your questionnaire answers, your goal/focus, and <strong>derived summary values</strong> (e.g., your score, HealthSpan Age, and pillar percentiles) — to <strong>DeepSeek</strong> (an AI provider) on our servers. We do <strong>not</strong> send raw Apple Health records. Outputs are validated for safety before you see them. DeepSeek processes these inputs under its own terms and privacy policy; we send only the minimum needed to produce your plan/explanation and never the raw Apple Health records.</p>
+
+<h2>Service providers (processors)</h2>
+<ul>
+  <li><strong>Apple</strong> — Sign in with Apple, in-app purchases, HealthKit (on-device).</li>
+  <li><strong>Supabase</strong> — authentication, database, and serverless functions hosting (region: Tokyo, ap-northeast-1).</li>
+  <li><strong>DeepSeek</strong> — AI generation of training plans and written explanations. DeepSeek is operated from China; we send only derived summary values (never raw Apple Health records).</li>
+  <li><strong>RevenueCat</strong> — subscription management.</li>
+</ul>
+<p>Each processes data on our behalf under their standard terms / data-processing agreements.</p>
+
+<h2>Storage, security, retention</h2>
+<ul>
+  <li>Data is stored in our Supabase project (Tokyo); each user's rows are isolated via Row-Level Security.</li>
+  <li>Data is encrypted in transit (HTTPS) and at rest by our hosting provider.</li>
+  <li>We retain your data while your account is active, and delete it within 30 days of account deletion (backups may persist for a short additional period before rotation).</li>
+</ul>
+
+<h2>Your rights</h2>
+<ul>
+  <li><strong>Access / export / correct / delete</strong> your data: email us at <a href="mailto:bodypilotlab@proton.me">bodypilotlab@proton.me</a> and we will respond within a reasonable time.</li>
+  <li><strong>Delete your account</strong>: you can delete your account and associated data in the app's account settings, or by emailing us.</li>
+  <li>Depending on your region (e.g., EEA/UK GDPR, California CCPA), you may have additional rights (access, portability, erasure, objection). Contact us to exercise them.</li>
+</ul>
+
+<h2>Children</h2>
+<p>This app is rated 17+ and is not directed to children under 13 (or the minimum age in your country). We do not knowingly collect data from children.</p>
+
+<h2>International transfers</h2>
+<p>Data is processed and stored in Japan (Supabase, Tokyo) and processed by DeepSeek in China. If you use the app from the EEA/UK, these are international transfers; we rely on the providers' contractual safeguards.</p>
+
+<h2>Changes</h2>
+<p>We may update this policy; we will post the new effective date here and, for material changes, notify you in-app.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:bodypilotlab@proton.me">bodypilotlab@proton.me</a> · KAI LI</p>
+
+</body>
+</html>
