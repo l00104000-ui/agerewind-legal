@@ -24,77 +24,47 @@
 <h1>Privacy Policy</h1>
 <div class="meta">
   <strong>App:</strong> AgeRewind &nbsp;·&nbsp;
-  <strong>Effective date:</strong> 2026-07-02<br>
+  <strong>Effective date:</strong> 2026-11-19<br>
   <strong>Provider:</strong> KAI LI &nbsp;·&nbsp;
   <strong>Contact:</strong> <a href="mailto:bodypilotlab@proton.me">bodypilotlab@proton.me</a> &nbsp;·&nbsp;
   <strong>Governing law:</strong> China
 </div>
 
-<p class="note">This is a plain-language privacy policy reflecting the actual build: on-device deterministic HealthSpan scoring, and a third-party AI provider (DeepSeek) used only for written plans/explanations. AgeRewind is a non-medical wellness app.</p>
-
-<h2>Summary</h2>
-<p>We collect the minimum needed to run a personalized, adaptive fitness experience: your account, your questionnaire answers, your workouts/check-ins, your self-entered strength-test results and goals, and <strong>aggregated</strong> health metrics derived on your device. Your <strong>HealthSpan Score and HealthSpan Age are computed on your device</strong> by a deterministic engine; we store only the resulting summary values, not your raw Apple Health records. We use a third-party AI provider for written explanations and to turn your goal into a plan. We never sell your data.</p>
-
-<h2>What we collect</h2>
+<p>AgeRewind is a non-medical wellness app.</p>
+<h2>What we collect and why</h2>
+<p>Your HealthSpan Score and HealthSpan Age are computed on your device by a deterministic engine. We synchronize account-linked records to provide your training history, restore your progress and adapt your plan. Derived health information remains personal information.</p>
 <ul>
-  <li><strong>Account</strong> — when you sign in with Apple: an Apple user identifier, and your email/name <strong>only if you choose to share them</strong>. We do not receive your Apple password.</li>
-  <li><strong>Questionnaire / profile</strong> — answers you provide (e.g., age, sex, goals, experience, availability, self-reported constraints, and optional body measurements such as height/weight/waist).</li>
-  <li><strong>Derived health metrics</strong> — features your device computes from Apple Health, such as 30-day average resting heart rate, VO₂max, weekly active minutes, and body composition. <strong>Raw HealthKit records (individual workouts, heart-rate samples, etc.) stay on your device and are not uploaded.</strong></li>
-  <li><strong>Strength-test results</strong> — counts/times you enter for the optional baseline test (push-ups, chair stand, single-leg balance).</li>
-  <li><strong>Goals</strong> — the focus areas, target, and timeframe you choose.</li>
-  <li><strong>Scores over time</strong> — your computed HealthSpan Score and HealthSpan Age history (derived summary values), used to show trends.</li>
-  <li><strong>Training data</strong> — generated plans and your check-ins/logs.</li>
-  <li><strong>Subscription status</strong> — whether you have an active subscription (via Apple/RevenueCat). We do not receive your payment card details; purchases are processed by Apple.</li>
-  <li><strong>Basic technical data</strong> — we use Apple's standard crash diagnostics to fix bugs. We do <strong>not</strong> embed third-party advertising or tracking SDKs.</li>
+<li>Account: your Apple sign-in identifier and the name/email you choose to share. We do not receive your Apple password or payment card details.</li>
+<li>Profile and goals: age, sex, body measurements, experience, availability, equipment, training considerations and targets you enter.</li>
+<li>Health and fitness summaries: derived heart/fitness metrics and score history, entered weekly metrics, field-test results, dates, styles and protocols.</li>
+<li><strong>Per-workout summaries</strong>: a stable workout identifier for deduplication, activity category/type, start/end time and duration. These are individual workout summaries, not merely weekly totals. Raw heart-rate samples, workout routes and device names are not included in the cloud synchronization payload.</li>
+<li>Training records: generated/imported plans, manual task completions, exclusions, schedule adjustments, saved AI explanations and reviews, and program progress.</li>
+<li>Service records: AI request kinds, timestamps and token/cache counts for limits and cost monitoring. AI output and training feedback are stored separately as account content; they are not part of the cost ledger.</li>
+<li>Subscription records: entitlement status and provider event metadata through Apple and RevenueCat.</li>
+<li>Product interaction and diagnostic records: bounded event names, operation/error categories, timestamps and counts used to measure reliability and product usage. First-party copies are associated with your account. They contain no raw health measurements or free-form model output.</li>
 </ul>
-
-<h2>How we use it</h2>
-<ul>
-  <li>Compute your HealthSpan Score and HealthSpan Age <strong>on your device</strong> (deterministic, not AI).</li>
-  <li>Generate and adapt your training plans, and (for subscribers) written explanations of your results.</li>
-  <li>Show your progress and trends.</li>
-  <li>Manage your account and subscription.</li>
-  <li>Maintain security and prevent abuse (e.g., per-account free-usage limits).</li>
-</ul>
-<p>We do <strong>not</strong> use your data for advertising and do <strong>not</strong> sell it.</p>
-
-<h2>AI processing</h2>
-<p>Your scores and HealthSpan Age are computed <strong>on your device</strong> and are <strong>not</strong> produced by AI. We use a third-party AI provider only to (a) turn your chosen goal and focus areas into a training plan, and (b) for subscribers, write a plain-language explanation of your already-computed results. For these, our backend sends the relevant inputs — your questionnaire answers, your goal/focus, and <strong>derived summary values</strong> (e.g., your score, HealthSpan Age, and pillar percentiles) — to <strong>DeepSeek</strong> (an AI provider) on our servers. We do <strong>not</strong> send raw Apple Health records. Outputs are validated for safety before you see them. DeepSeek processes these inputs under its own terms and privacy policy; we send only the minimum needed to produce your plan/explanation and never the raw Apple Health records.</p>
-
-<h2>Service providers (processors)</h2>
-<ul>
-  <li><strong>Apple</strong> — Sign in with Apple, in-app purchases, HealthKit (on-device).</li>
-  <li><strong>Supabase</strong> — authentication, database, and serverless functions hosting (region: Tokyo, ap-northeast-1).</li>
-  <li><strong>DeepSeek</strong> — AI generation of training plans and written explanations. DeepSeek is operated from China; we send only derived summary values (never raw Apple Health records).</li>
-  <li><strong>RevenueCat</strong> — subscription management.</li>
-</ul>
-<p>Each processes data on our behalf under their standard terms / data-processing agreements.</p>
-
-<h2>Storage, security, retention</h2>
-<ul>
-  <li>Data is stored in our Supabase project (Tokyo); each user's rows are isolated via Row-Level Security.</li>
-  <li>Data is encrypted in transit (HTTPS) and at rest by our hosting provider.</li>
-  <li>We retain your data while your account is active, and delete it within 30 days of account deletion (backups may persist for a short additional period before rotation).</li>
-</ul>
-
-<h2>Your rights</h2>
-<ul>
-  <li><strong>Access / export / correct / delete</strong> your data: email us at <a href="mailto:bodypilotlab@proton.me">bodypilotlab@proton.me</a> and we will respond within a reasonable time.</li>
-  <li><strong>Delete your account</strong>: you can delete your account and associated data in the app's account settings, or by emailing us.</li>
-  <li>Depending on your region (e.g., EEA/UK GDPR, California CCPA), you may have additional rights (access, portability, erasure, objection). Contact us to exercise them.</li>
-</ul>
-
-<h2>Children</h2>
-<p>This app is rated 17+ and is not directed to children under 13 (or the minimum age in your country). We do not knowingly collect data from children.</p>
-
-<h2>International transfers</h2>
-<p>Data is processed and stored in Japan (Supabase, Tokyo) and processed by DeepSeek in China. If you use the app from the EEA/UK, these are international transfers; we rely on the providers' contractual safeguards.</p>
-
-<h2>Changes</h2>
-<p>We may update this policy; we will post the new effective date here and, for material changes, notify you in-app.</p>
-
-<h2>Contact</h2>
-<p><a href="mailto:bodypilotlab@proton.me">bodypilotlab@proton.me</a> · KAI LI</p>
-
+<p>Cloud synchronization covers plans, workout summaries, weekly metrics, manual checks, exclusions, schedules, score snapshots, baseline tests, goals, monthly reviews, profiles, program state and saved explanations. Offline changes stay in this device&#x27;s account store until synchronization succeeds. Conflicting edits may require you to choose a version.</p>
+<h2>Optional AI processing</h2>
+<p>AI plan generation, adaptation, reviews and explanations are currently paused. While they are paused, AgeRewind sends no requests to DeepSeek. You can still log workouts and view saved records.</p>
+<p>If these features become available, sending a request will require your consent to the applicable data-sharing policy. With that consent, Supabase in Tokyo would send relevant inputs to <strong>DeepSeek</strong>, which processes data in China, to generate/adapt plans and explain scores. Depending on the feature, these inputs include profile and body measurements, training considerations, goals, derived metrics and score summaries, workout/completion summaries, field-test results and protocols, and plan content.</p>
+<p>Apple sign-in identity, name, email, payment details, device names and raw heart-rate sample series are not included in those AI requests. The absence of direct identifiers does not make health information anonymous. Output validation reduces known errors; it does not guarantee that every AI suggestion is appropriate.</p>
+<p>You can decline or withdraw in <strong>Settings → AI data sharing</strong>. Local tracking, saved records and on-device scoring remain available. Offline withdrawal immediately blocks requests from that device and is sent to the server when a connection is available. It is not effective on other devices until the server receives it. Withdrawal stops new AI requests; it cannot recall inputs already sent or automatically erase previously generated content.</p>
+<p>DeepSeek&#x27;s retention, training and processing terms are described in its <a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html">privacy policy</a> and the agreement applicable to the service. We do not promise zero retention or exclusion from model training without an applicable provider agreement.</p>
+<h2>Service providers and international processing</h2>
+<p>Apple provides authentication, purchases and on-device HealthKit access. Supabase hosts authentication, records and functions in Tokyo, Japan. China is the processing location for the optional DeepSeek features described above. RevenueCat handles subscription information. Data processing in these regions can constitute an international transfer. Contact us for information about applicable contractual safeguards; this policy does not itself establish those safeguards.</p>
+<p>We use first-party product analytics and TelemetryDeck 2.14.1. TelemetryDeck receives coarse feature-event names and SDK metadata such as app/OS version, device model, locale, time zone, display/accessibility settings and session statistics. Its SDK hashes an account or device-derived identifier before transmission; we do not treat hashing alone as a guarantee that all analytics is anonymous. Custom event parameters, including plan IDs and training counts, stay in the first-party analytics pipeline. We do not sell your data, use health information for advertising, or share it with advertising networks or data brokers. We analyze account-linked training summaries and product events internally to improve features and reliability; observational associations do not prove a health effect.</p>
+<h2>Storage and retention</h2>
+<p>Network communication uses HTTPS. Server tables enforce access controls, and local records are separated by account and protected using iOS file protection. These controls reduce risk; no system can promise absolute security.</p>
+<p>Account content is retained while your account is active. Diagnostic failure records contain bounded categories, not production inputs, and are removed by the daily retention job once older than 30 days. Synthetic regression fixtures are separate from production records.</p>
+<p>Deleting your account removes the active account and its cloud content. Provider cleanup is queued and retried. During cleanup, a restricted task retains only the provider user ID and, when available, an encrypted Apple revocation token. The token is removed once revoked, and the provider ID is removed once cleanup is accepted. Completed receipts contain no provider identity and are removed after 30 days. If cleanup remains unsuccessful, the minimal pending task is retained to complete your request; contact support for status.</p>
+<p>TelemetryDeck analytics follow its <a href="https://telemetrydeck.com/docs/guides/privacy-faq/">retention policy</a>, which currently specifies no guaranteed deletion date for cold-storage events. Our account-deletion queue does not erase TelemetryDeck event storage; contact support about previously transmitted analytics.</p>
+<p>Provider backups and legally required transaction records follow their applicable retention schedules. We do not claim that all backup copies or Apple transaction records disappear immediately.</p>
+<h2>Your choices and account deletion</h2>
+<p>You can review, correct and delete records in the app and withdraw AI sharing. To request account deletion, access, export, correction or assistance, email <a href="mailto:bodypilotlab@proton.me">bodypilotlab@proton.me</a>. We will respond within a reasonable time. Depending on your region, you may have additional rights, including portability, erasure and objection.</p>
+<p>Use <strong>Settings → Delete account</strong> to erase your account. Apple may ask you to authenticate again so we can obtain and revoke a token. If automatic revocation is unavailable, the app explicitly links to <a href="https://support.apple.com/en-us/102571">Apple&#x27;s manual revocation instructions</a>; this does not prevent deletion of your account data. RevenueCat deletion is asynchronous and retried until the provider accepts the request. We distinguish provider acceptance from completion of all external copies.</p>
+<p><strong>Account deletion does not cancel an Apple subscription.</strong> Manage or cancel it through the App Store. Apple may retain purchase records for financial/legal obligations. On the device that performs deletion, we remove the local account store, cached preferences, widget data and account notifications. Offline copies on other devices require those devices to reconnect or be erased.</p>
+<h2>Children and changes</h2>
+<p>This service is not directed to children under 13 or the applicable minimum age in your region. We do not knowingly collect data from children. Contact us if a child&#x27;s data was submitted. We will post the effective date of changes here and notify you in the app of material changes. Material changes to AI recipients, regions or data scope require a new in-app policy decision before further AI requests.</p>
+<p>For privacy questions or regional data rights, contact <a href="mailto:bodypilotlab@proton.me">bodypilotlab@proton.me</a>.</p>
 </body>
 </html>
